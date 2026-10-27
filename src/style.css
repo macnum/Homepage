@@ -189,13 +189,13 @@ main {
 
 @media (max-width:768px) {
     header {
-        padding: 6rem;
+        padding: 6rem 3rem ;
     }
     main, footer {
         padding: 1.5rem;
     }
     .about-container {
-        display: block;
+        display: block;;
     }
 
     .about-content-container {
@@ -206,6 +206,13 @@ main {
        float: left;
        width: 167px;
        margin: -75px 15px 10px 0;
+       position: relative;
+    }
+
+    .about-image-container h1 {
+        position: absolute;
+        top:0;
+        left: 87%;
     }
     .about-image-container img {
         width: 120%;
