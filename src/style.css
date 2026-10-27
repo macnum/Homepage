@@ -60,6 +60,7 @@ header, main, footer {
      max-width: 250px;
     margin: 0 auto;
     margin-right: -10px;
+    position: relative;
     
 }
 
@@ -70,6 +71,7 @@ header, main, footer {
 }
 .about-image-container h1 {
     position: absolute;
+
  
     bottom: 0;
     left: 15%;
