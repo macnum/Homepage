@@ -2,7 +2,7 @@
     --bg-blue: #63a6c7;
     --text: #0a0909;
     --card: #fff;
-    --bg-white: #eee
+    --bg-white: #eee;
     --font: "Playfair Display",  Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     --line-spacing: 1.5
 }
@@ -18,7 +18,7 @@ a{
     text-decoration: none;
 }
 body {
-    background-color: var(--bg-white);
+    background-color: var(--card);
     color: var(--text);
     font-family: var(--font);
     margin: 0;
@@ -49,12 +49,12 @@ header, main, footer {
     justify-content: center;
     align-items: center;
     gap: 2px;
-    
+    position: relative;
   
 }
 
 .about-image-container {
-    position: relative;
+    z-index: 2;
     white-space: nowrap;
     width: 100%;
      max-width: 250px;
@@ -184,4 +184,48 @@ main {
 
 .footer-image img {
     display: block;
+}
+
+
+@media (max-width:768px) {
+    header {
+        padding: 6rem;
+    }
+    main, footer {
+        padding: 1.5rem;
+    }
+    .about-container {
+        display: block;
+    }
+
+    .about-content-container {
+        min-width: 0;
+    }
+
+    .about-image-container {
+       float: left;
+       width: 167px;
+       margin: -75px 15px 10px 0;
+    }
+    .about-image-container img {
+        width: 120%;
+        transform: translateX(-15%);
+    }
+
+    .hero-content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media  (max-width:480px) {
+     .hero-content-grid {
+        grid-template-columns: 1fr ;
+        row-gap: 2rem;
+    }
+
+
+    .footer-grid {
+        flex-direction: column;
+    }
 }
