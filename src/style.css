@@ -4,7 +4,7 @@
     --card: #fff;
     --bg-white: #eee;
     --font: "Playfair Display",  Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    --line-spacing: 1.5
+    --line-spacing: 1.5;
 }
 *::before, *::after, *{
     box-sizing: border-box;
@@ -184,10 +184,12 @@ main {
 
 }
 
-.footer-image img {
-    display: block;
-}
 
+ .footer-image img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+}
 
 @media (max-width:768px) {
     header {
@@ -197,7 +199,7 @@ main {
         padding: 1.5rem;
     }
     .about-container {
-        display: block;;
+        display: block;
     }
 
     .about-content-container {
@@ -228,6 +230,29 @@ main {
 
 
 @media  (max-width:480px) {
+    header {
+        padding: 1.5rem;
+        margin: 1.5rem 0rem;
+        text-align: center;
+    }
+    .about-image-container {
+        float: none;
+        margin: -75px auto 10px;
+        width: 100%;
+        
+    }
+    .about-image-container img {
+        width: 100%;
+        transform: none;
+        height: 300px;
+        padding: 1rem 0 0 0;
+    }
+    .about-image-container h1 {
+        position: absolute;
+        
+        left: 0;
+        top: 80%;
+    }
      .hero-content-grid {
         grid-template-columns: 1fr ;
         row-gap: 2rem;
@@ -237,4 +262,5 @@ main {
     .footer-grid {
         flex-direction: column;
     }
+   
 }
